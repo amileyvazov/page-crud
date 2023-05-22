@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/owl-carusel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/owl-carusel/owl.theme.default.css">
+    <link rel="stylesheet" href="./assets/owl-carusel/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/owl-carusel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class=" nav row d-flex justify-content-between">
+            <div class="logo col-2 d-flex justify-content-start"><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAXCAYAAADZYae+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo5NUM2M0FDMDkyMTVFNTExQTUzM0FGRkVCN0ZCQjNFRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFRkEzMDEyMzE1RkUxMUVCOEJEN0VCNjZCMjhFMTFCNiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFRkEzMDEyMjE1RkUxMUVCOEJEN0VCNjZCMjhFMTFCNiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdCQzRBNDYxQzEyM0U4MTFBOTEyOUM3QzREMDZBNzRFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk1QzYzQUMwOTIxNUU1MTFBNTMzQUZGRUI3RkJCM0VEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+jVn/9gAABIhJREFUeNrsW4txozAQlZlrgJTgdGBcAi6BlIBLwCXYJUAJpgQowSrBlBBKuBN3q2SzWX1h4jhnzWjsGLGsVk9vPyKrzWYjLK1QPYOeo98l9F71Vnx9+03+Xt2J7G9pEynl388sy6b1TtEaD+raCNdy9b1PDDJK1a+qn1WvCFgEAKiE61f4/mj339aq1wCaaW2PAJZpfbvpOwWMHljDzSEPOSN0PtodNsUgJ/yJiKDWYxIClg7cUEwr4P4HaH4QhhS7dBB6fAJMDa6Gtkb1HfhE3beqn5ixGUbjo919e4Fw5EABUzLMMgU9z6rvMcLQtQNclwzTPGKa+21P8LlVrmmY/pb/ouInDJiKAcTEKoND+ADjKGgqSySPuwgcZ7pP/14Z4qsrGtMZ9AuVjROEM3mGThhCN44OLl+RrIuF/UNaSuRqW9A4ZrR9JsAIa4aKRk9FRhhPF6q48U4pUQaH55dD9H+ZGW9lIL9mbKjnr8HqWuwCycqJXjojvcxMLGpyL7duzpYwKXPjwSwc0zSMQW/Vco9YKoMFiAXjxTOTXMPY0sFQPrKKSKAXzAbeB5DCB8BQRftII/ZfAJjeoJ/+fSTpIN5NPeM6c7RhfGWbAvuBGUt3eM4sJCdLWmStOVficEX0GVPCElVwXW02myUrmy5Zvs+aK4de3yKwnMluO5CMzyX7SjbZCDIahjmOhA0GSBT0QlKW0slETxa8YmIoX73pfCXYA8ct3gv86z+J/EcSn82JiyhYuKBfu3ZJalNrkNEwsnQCMTK6HxjW9mFw6opGcEXRLfmhAGkZVtDZ0RxXmTPUbtuekqlX5RZZtpjiAIDS3QV8kyuScwHTM6hcwpj9DQFzMuins6PY8y8uQQgFb25giKUPcWlW1BrsEgyYwWGUWGMONwSMJHGLMNRnQjOO1OLqbBkkJyNGVmhmtDggOYYphf/BIzZC+Y0YBoPmBZhgNKTWx8hYSASk1ZyM0QHGpd1yHbGuLGBaZheEFog6JhtoI4wplpgUY7gp0HsC8MxxwTH3ckcuQvBHKks2WmdJxQJvFCQooKI7r/MIEHVqmHnEEJzBcw/XFuMaK9RzAp7djJ1N9XcF0RmTDrcGBjg6dDnCmujuKjpyldxQRjUCpmUmkIn3c4zC8GCu7N1bgkHJuL90yQkBQx1Rp8HfnFiLVsH1KyGlIQXnmLexyLow+ulsR4Nfd+kJ8BOjVxVr3BV6RTP1ZBVX3LCzBHC5+FylHJDhTOwSUrjTh2x0t0nDM0ILd9wc6DzWBte6IyzlIytjmOdT8c2hN+cF3nQJKdytyDu9KezKmJSzF36Hll2E2wmt9FaeTDXp+kx09qlGlyL8vZ+9gXlDZY0AliHAJhnDdm9yQgCTMMrsYeGHgAkcHMyC24tHsWtWcQkYw1UjGQJ05lzT1tNGmg0ai6ydp6weAB5asuAKiFFB8Grmfw1IiH1Cja7T8AJRpUTFJRrbnAIZButfiI+vDPQozuL0Dj1bK0F+htzQIN4PEJsAu5QoRkmRLP3fGbZShY/eZyYebRTDeB8X/BFgAGKekrDc/Q/hAAAAAElFTkSuQmCC" alt=""></a></div>
+            <div class="list col-6 ">
+                <ul class="d-flex py-4 justify-content-between">
+                    <li class="px-3 items d-flex">
+                        <a class="" href="">Home</a>
+                       
+                        <ul class="d-none">
+                            <li><a href="">Style1</a></li>
+                            <li><a href="">Style2</a></li>
+                            <li><a href="">Style3</a></li>
+                            <li><a href="">Style4</a></li>
+                        </ul>
+                    </li>
+                    <li class="px-3 d-flex items">
+                        <a href="">Shop</a>
+                        
+                        <ul class="d-none">
+                            <li><a href="">Login</a></li>
+                            <li><a href="">Simple product</a></li>
+                            <li><a href="">Shop Page</a></li>
+                            <li><a href="">Shop infinity</a></li>
+                        </ul>
+                    </li>
+                    <li class="px-3 items d-flex">
+                        <a href="">Blog</a>
+                       
+                        <ul class="d-none">
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Blog2 Column</a></li>
+                            <li><a href="">Blog3 Column</a></li>
+                            <li><a href="">Blog4 Column</a></li>
+                        </ul>
+                </li>
+                <li class="px-3 d-flex items">
+                    <a href="">Pages</a>
+                    <ul class="d-none">
+                        <li><a href="">Whishlist</a></li>
+                        <li><a href="">CheckOUT</a></li>
+                        <li><a href="">Shopingcard</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </li>
+                <li class="px-3 items d-flex">
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+           </div>
+           <div class="sectionitem col-4 d-flex justify-content-end">
+               <div class="search  px-3 item1">
+                   <a class="d-flex" href="">
+                       <i class="fa-solid fa-magnifying-glass"></i>
+                       <span>Search</span>
+                   </a>
+               </div>
+               <div class="cash item1 ">
+                   <a class="d-flex px-2  "  href="">
+                       <i class="fa-solid fa-bag-shopping"></i>
+                       <span class="px-2">Card</span>
+                       <i class="fa-brands fa-creative-commons-zero"></i>
+                   </a>
+               </div>
+                <div class="bars px-2 item1">
+                    <a class="d-flex"  href=""><i class="fa-solid fa-bars"></i></a>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="owl-carousel  owl-theme">
+                <div class="item col-12 d-flex">
+                    <div class="text">
+                        <h2>Handmade Hand Carved Coffe</h2>
+                      <p>As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special occasion every day.</p>
+                      <a href="" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                        <img src="https://outstock-vue.vercel.app/_nuxt/slider-1.9ccbaa17.jpg" alt="">
+
+                    </div>
+                   
+                    
+                </div>
+                <div class="item col-12 d-flex">
+                    <div class="text">
+                     <h2>High Beam by Chung</h2>
+                     <p>High Beam is an adjustable desk or shelf light that offers a wide variety of lighting possibilities</p>
+                     <a href="" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                         <img src="https://outstock-vue.vercel.app/_nuxt/slider-2.ddb414d2.jpg" alt="">
+                    </div>
+                    
+                    
+                </div>
+                <div class="item col-12 d-flex">
+                    <div class="text">
+                        <h2>Think Different & Do it otherwise</h2>
+                      <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                       <a href="" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                        <img src="https://outstock-vue.vercel.app/_nuxt/slider-2.ddb414d2.jpg" alt="">
+                    </div>
+                    
+                   
+                </div>
+                <div class="item col-12 d-flex">
+                    <div class="text">
+                        <h2>High Beam by Chung</h2>
+                    <p>High Beam is an adjustable desk or shelf light that offers a wide variety of lighting possibilities</p>
+                    <a href="" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                        <img src="https://outstock-vue.vercel.app/_nuxt/slider-3.2c2310fe.jpg" alt="">
+                    </div>
+                    
+                </div>
+                <div class="item col-12 d-flex">
+                    <div class="text">
+                        
+                        <h2>Handmade Hand Carved Coffe</h2>
+                        <p>As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special occasion every day.</p>
+                        <a href="" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                        <img src="https://outstock-vue.vercel.app/_nuxt/slider-3.2c2310fe.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item col-12 d-flex">
+                    <div class="text">
+                        <h2>Handmade Hand Carved Coffe</h2>
+                        <p>As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special occasion every day.</p>
+                        <a href="" class="btn border-dark">DISCOVER NOW</a>
+
+                    </div>
+                    <div class="image">
+                        <img src="https://outstock-vue.vercel.app/_nuxt/slider-3.2c2310fe.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item  d-flex">
+                    <div class="text">
+                        
+                        <h2>Handmade Hand Carved Coffe</h2>
+                        <p>As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special occasion every day.</p>
+                        <a href="https://outstock-vue.vercel.app/_nuxt/slider-1.9ccbaa17.jpg" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="item w-100 d-flex">
+                    <div class="text">
+                        
+                        <h2>Handmade Hand Carved Coffe</h2>
+                        <p>As rich and unique as the coffee beans it is intended for, this little scoop will make your morning ritual a special occasion every day.</p>
+                        <a href="" class="btn border-dark">DISCOVER NOW</a>
+                    </div>
+                    <div class="image">
+                        <img src="https://outstock-vue.vercel.app/_nuxt/slider-2.ddb414d2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+             <div class="row text-center">
+                <div class="title py-4">
+                  <h2>Trending Products</h2>
+                  <span>Mirum est notare quam littera gothica quam nunc putamus parum claram!</span>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_2.2fad43bb.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Wooden container Bowl</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_5.d5254b98.png" alt="">
+                            <div class="icon-item">
+                              <i class="fa-regular fa-heart"></i>
+                             <i class="fa-solid fa-sliders"></i>
+                             <i class="fa-solid fa-magnifying-glass"></i>
+                                
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Juicy Pendant Lamp</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_1.edf26ef8.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Hauteville Plywood Chair</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_8.9e28b5ad.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Bottle With Wooden Cork</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_7.db522846.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Bottle With Wooden Cork</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_6.6223dcf4.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Bottle With Wooden Cork</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_3.ae6cc204.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Bottle With Wooden Cork</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-head d-flex">
+                            <img src="https://outstock-vue.vercel.app/_nuxt/product_3.ae6cc204.png" alt="">
+                            <div class="icon-item">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h2>Bottle With Wooden Cork</h2>
+                            <p><span>$96.00</span><s>$128.00</s></p>
+                            <a href=""><span>Add</span></a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script >
+ $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1,
+            loop:true,
+        }
+    }
+})
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.items{
+    list-style: none;
+}
+.logo a img{
+    width: 100%;
+   padding: 10px 0;
+   padding-bottom: 30px;
+}
+
+.items a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 100;
+    font-family: "sans-serif";
+}
+
+.items a:hover{
+    text-decoration:1px solid #444;
+    transition: 3s;
+    padding: 0px;
+    font-size: 15px;
+    transform: calc(1ms);
+
+}
+.item1 a{
+    align-items: center;
+   font-size: 12px;
+   text-decoration: none;
+   color:#444;
+   font-weight: 100;
+   font-family: "sans-serif";
+}
+.item1 a:hover{
+    text-decoration:1px solid #444;
+    transition: 3s;
+    padding: 0px;
+    font-size: 15px;
+   transform: calc(1ms);
+}
+.item1 a i{
+    color: #444;
+}
+
+.nav{
+    max-height: 80px;
+    align-items: center;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.btn:hover{
+transform: calc(1s);
+transition: 1s;
+position: calc(-45,.5);
+}
+.fa-solid{
+    font-size: 10px;
+    text-align: center;
+    padding:10px 0;
+}
+.text{
+    margin: 10% 0;
+    z-index: 1;
+    position: absolute;
+    align-content: center;
+}
+.text h2{
+    font-size: 15px;
+    width: 60%;
+}
+
+.text p{
+    font-size: 10px;
+    width: 60%;
+}
+.text a{
+    font-size: 10px;
+    width: 100px;
+}
+.slide-show{
+    width: 100%;
+    height: 100vh;
+}
+.list{
+    padding: 20px;
+}
+.sectionitem{
+    padding-bottom: 20px;
+}
+.title h2{
+    font-size: 50px;
+    color: #000;
+    font-weight: 400;
+    padding: 20px;
+}
+.title span{
+    font-size: 20px;
+    color: #444;
+    font-weight: 200;
+    padding: 10px;
+
+}
+.card .card-head .icon-item{
+    position: absolute;
+
+}
+.icon-item i{
+  font-size: 20px;
+  display: flex;
+  justify-content: end;
+  width: calc(100%/1);
+}
+.card-head img{
+    position: relative;
+}
+.card-body a{
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+}
